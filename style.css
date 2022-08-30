@@ -1,0 +1,186 @@
+* {
+    font-family: 'Raleway', 'Poppins';
+}
+body {
+    margin: 0;
+    background: url(images/bg-desktop.png), hsl(229, 57%, 11%);
+    background-repeat: no-repeat;
+    background-position: left 0 bottom -310px;  
+    background-size: cover;
+}
+main {
+    width: 100%;
+    height: 97.5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section {
+    display: flex;
+    align-items: flex-end;
+    gap: 20px;
+}
+#button-section {
+    background-color: hsl(228, 56%, 26%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 250px;
+    height: 90px;
+    padding: 4%;
+    border-radius: 7px 80px 7px 7px; 
+}
+#button-section > img {
+    width: 110px;
+}
+#buttons {
+    display: flex;
+    gap: 5%;
+}
+#buttons button {
+    background-color: hsl(229, 57%, 11%);
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 38px;
+    height: 38px;
+}
+#buttons button img {
+    width: 20px;
+    transition: .2s; 
+}
+#buttons button:hover img {
+    transform: scale(1.2);
+} 
+#overview {
+    display: flex;
+    flex-direction: column;
+    background-color: hsl(228, 56%, 26%);
+    border-radius: 7px;
+    height: 67.5px; 
+    width: 375px;
+    padding: 3% 4%;
+    color: hsl(243, 100%, 93%);
+    position: relative;
+}
+#overview * {
+    font-size: 12px;
+    margin: 0;
+}
+.white {
+    color: white;
+}
+#storage-left {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    right: 7%;
+    top: -33%;
+    background-color: white;
+    padding: 4px 12px;
+    color: hsl(243, 100%, 93%);
+    border-radius: 5px 5px 0 5px;
+    font-size: 10px;
+}
+#storage-left::after {
+    position: absolute;
+    content: '';
+    bottom: -25%;
+    right: 0; 
+    border-width: 15px;
+    border-style: solid;
+    border-color: transparent rgb(255, 255, 255) transparent transparent ;
+}
+#large-text {
+    font-size: 23px;
+    color: hsl(229, 57%, 11%);
+    font-weight: 700;
+}
+#range {
+    width: 100%;
+    height: 12px;
+    margin: 10px 0 7px 0;
+    border-radius: 10px;
+    background-color: hsl(229, 57%, 11%);
+    padding: 2px;
+}
+#slider {
+    width: 81.5%;
+    height: 100%;
+    border-radius: 10px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: flex-end;
+    padding: 1px;
+    background: linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+}
+#thumb {
+    width: 8px; 
+    height: 100%;
+    border-radius: 50px;
+    background-color: white;
+}
+#size {
+    display: flex; 
+    justify-content: space-between;
+}
+#size p { 
+    font-size: 9px;
+}
+@media screen and (max-width: 700px) {
+    section {
+        gap: 8px;
+    }
+    #button-section {
+        width: 200px;
+        height: 80px;
+        padding: 3%; 
+    }
+    #overview {
+        height: 60px;  
+        width: 340px;
+        padding: 2% 2%;
+    }
+}
+@media screen and (max-width: 580px) {
+    body {
+        background-image: url(images/bg-mobile.png);
+        background-size: cover;
+        background-position: initial;
+    }
+    section {
+        gap: 3vh;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%; 
+    }
+    #button-section {
+        width: 80%;
+        height: 150px;
+        box-sizing: border-box; 
+        padding: 6%;  
+    }
+    #overview {
+        height: auto;  
+        width: 80%;
+        padding: 6%;
+        box-sizing: border-box;  
+        text-align: center;
+    }
+    #storage-left {
+        gap: 4px;
+        right: 40%;
+        top: 80%;
+        padding: 4px 12px;
+        border-radius: 5px;
+    }
+    #storage-left::after {
+        all: unset;
+    }
+}
